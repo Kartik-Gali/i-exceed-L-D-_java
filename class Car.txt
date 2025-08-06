@@ -1,0 +1,42 @@
+class Car {
+    String nameofCompany;
+    boolean isAvailable;
+
+    Car(String nameofCompany, boolean isAvailable) {
+        this.nameofCompany = nameofCompany;
+        this.isAvailable = isAvailable;
+    }
+
+    public void getCarDetails() {
+        System.out.println("Company: " + nameofCompany);
+        System.out.println("Availability: " + (isAvailable ? "Available" : "Not Available"));
+    }
+}
+
+class Scorpio extends Car {
+    String carName, modelName, color;
+
+    Scorpio(String carName, String modelName, String color) {
+        super("Mahindra", true);
+        this.carName = carName;
+        this.modelName = modelName;
+        this.color = color;
+    }
+
+    public void displayCarModel() {
+        System.out.println("Car Name: " + carName);
+        System.out.println("Model: " + modelName);
+        System.out.println("Color: " + color);
+    }
+}
+
+public class DemoInher1 {
+    public static void main(String[] args) {
+        Scorpio c1 = new Scorpio("Scorpio", "VLX", "Black");
+        System.out.println("=== Car Details ===");
+        c1.getCarDetails();
+
+        System.out.println("\n=== Model Details ===");
+        c1.displayCarModel();
+    }
+}
