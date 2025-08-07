@@ -1,0 +1,28 @@
+class Karnataka {
+    private String cm = "Siddaramaiah";
+    private String capital = "Bengaluru";
+    private double area_state = 191791.0;
+
+    class Mysuru {
+        String collector_name;
+        int area_dist;
+
+        Mysuru(String collector_name, int area_dist) {
+            this.collector_name = collector_name;
+            this.area_dist = area_dist;
+        }
+
+        public void displayMysuru() {
+            System.out.println("Name of CM: " + cm);
+            System.out.println("Name of the collector: " + collector_name);
+            System.out.println("District area: " + area_dist);
+        }
+    }
+}
+
+public class DemoNested {
+    public static void main(String[] args) {
+        Karnataka.Mysuru my = new Karnataka().new Mysuru("Dr. Ravi Kumar", 685000);
+        my.displayMysuru();
+    }
+}

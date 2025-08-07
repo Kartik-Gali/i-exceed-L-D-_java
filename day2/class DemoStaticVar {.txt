@@ -1,0 +1,14 @@
+class DemoStaticVar {
+    static int x;
+
+    DemoStaticVar() {
+        x++;
+        System.out.println(x);
+    }
+
+    public static void main(String[] args) {
+        DemoStaticVar obj1 = new DemoStaticVar();
+        DemoStaticVar obj2 = new DemoStaticVar();
+        DemoStaticVar obj3 = new DemoStaticVar();
+    }
+}
